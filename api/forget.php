@@ -1,0 +1,9 @@
+<?php
+include "../base.php";
+
+$res=$User->find(['email'=>$_POST['email']]);
+if(!empty($res)){
+    echo "您的密碼為:".$res['pw'];
+}else{
+    echo "查無此資料";
+}
